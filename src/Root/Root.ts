@@ -1,34 +1,20 @@
-import { store } from '../flux/Store';
-
 class Root extends HTMLElement {
-    constructor() {
+    constructor(){
         super();
-        this.attachShadow({ mode: 'open' });
+        this.attachShadow({mode:'open'});
     }
-
-    connectedCallback() {
-        store.load();
+    connectedCallback(){
         this.render();
     }
 
-    render() {
-        if (!this.shadowRoot) return;
-
-        this.shadowRoot.innerHTML = `
-            <style>
-                div {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 20px;
-                }
-            </style>
-            <div>
-            <custom-element-a></custom-element-a>
-            <custom-element-b></custom-element-b>
-            <custom-element-c></custom-element-c>
-            </div>
+    render(){
+        if(!this.shadowRoot) return;
+        this.shadowRoot.innerHTML=`
+            <upload-form></upload-form>
+            <meme-gallery></meme-gallery>
         `;
     }
 }
 
+customElements.define('root-element', Root);
 export default Root;
