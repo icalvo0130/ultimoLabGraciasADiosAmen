@@ -16,6 +16,12 @@ class Root extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
             <style>
+                :host {
+                    display: block;
+                    background: #000;
+                    color: #fff;
+                    min-height: 100vh;
+                }
                 div {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
@@ -23,9 +29,7 @@ class Root extends HTMLElement {
                 }
             </style>
             <div>
-            <custom-element-a></custom-element-a>
-            <custom-element-b></custom-element-b>
-            <custom-element-c></custom-element-c>
+            <upload-form></upload-form>
             </div>
         `;
     }

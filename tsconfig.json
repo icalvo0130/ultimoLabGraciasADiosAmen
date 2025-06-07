@@ -26,7 +26,11 @@
 //     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
 //     /* Modules */
-//     "module": "commonjs",                                /* Specify what module code is generated. */
+//         "module": "esnext", 
+// "target": "es6",       // asegúrate que el target sea mínimo es6 o mayor
+//  "moduleResolution": "node",
+// "strict": true,
+//  "esModuleInterop": true,,                                /* Specify what module code is generated. */
 //     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
 //     // "moduleResolution": "node10",                     /* Specify how TypeScript looks up a file from a given module specifier. */
 //     // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
@@ -116,10 +120,11 @@
 
 {
         "compilerOptions": {
-            "target": "ESNext", // Cambiar a ESNext
-            "module": "commonjs", // Cambiar a commonjs
-            "strict": true, // Es recomendable activar el modo estricto
-            "esModuleInterop": true, // Habilitar la interoperabilidad de módulos
+                "module": "esnext", 
+            "target": "es6",       // asegúrate que el target sea mínimo es6 o mayor
+            "moduleResolution": "node",
+            "strict": true,
+            "esModuleInterop": true,
             "skipLibCheck": true, // Omitir la comprobación de librerías
             "forceConsistentCasingInFileNames": true, // Forzar la consistencia en los nombres de archivo, útil para evitar errores en sistemas de archivos que no distinguen entre mayúsculas y minúsculas
             "outDir": "./dist" // Directorio de salida
